@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
     private Cell selectedCell;
 
     private const int GridSize = 9;
-    private const int SubGridSize = 3;
+    private const int SubGridSize= 3;
 
     private void Start()
     {
@@ -43,14 +43,14 @@ public class GameManager : MonoBehaviour
 
         selectedCell.UpdateValue(value);
 
-        if (!IsValid(selectedCell, cells))
+        if (!IsValid(selectedCell, cells)) 
         {
-            currentLives--;
+            currentLives--; 
             UpdateLivesUI();
 
-            if (currentLives <= 0)
+            if (currentLives <= 0) 
             {
-                RestartGame();
+                RestartGame(); 
                 return;
             }
         }
@@ -275,8 +275,8 @@ public class GameManager : MonoBehaviour
 
     public void ResetProgress()
     {
-        PlayerPrefs.DeleteAll();
-        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+        PlayerPrefs.DeleteAll(); 
+        UnityEngine.SceneManagement.SceneManager.LoadScene(0); 
     }
 
     public void ShowResetConfirmation()
